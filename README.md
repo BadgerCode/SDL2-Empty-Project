@@ -1,7 +1,11 @@
-### A sample, empty C++ project for Visual Studio 2015 (VS2015) with SDL2 ###
+# A sample, empty C++ project for Visual Studio 2015 (VS2015) with SDL2 #
 This has been tested in VS2015 Update 3.
 
-Extra libaries **not** included:
+[Getting Started with SDL2](http://headerphile.com/)
+
+### Extra Libraries
+These have **not** been included in this project.
+
 * SDL Image: https://www.libsdl.org/projects/SDL_image/
 * SDL Fonts: https://www.libsdl.org/projects/SDL_ttf/
 * SDL Networking: https://www.libsdl.org/projects/SDL_net/
@@ -15,7 +19,7 @@ To add these libraries:
 
 ----
 
-### Setting up SDL project in visual studio 2015. ###
+# Setting up SDL project in visual studio 2015. #
 
 * FOLLOW THESE STEPS EXACTLY.<br>
 * At any point during these steps, building might result in an error:	**"entry point must be defined"**.<br>
