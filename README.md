@@ -46,6 +46,7 @@ Create a new source file called "main.cpp"
 ##### 5.3. Linker: Input
 1. Edit Additional Dependencies
 2. Enter: SDL2.lib and SDL2main.lib on separate lines
+
 ##### 5.4. Linker: System
 Set SubSystem to Console
 
