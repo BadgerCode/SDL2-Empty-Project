@@ -55,12 +55,7 @@ Set SubSystem to Console
 2. Click on General
 3. Set Output Directory to $(ProjectDir)\bin\$(Configuration)\
 
-#### 7. Copy solution_dir/lib/SDL2.dll to your output directory
-* If you didn't do the previous step, the output directory will be solution_dir/
-* **You need to put it in the debug subfolder**.
-* If you build in release mode later on, you will have to put it into the release subfolder too.
-
-#### 8. Main.cpp- Add the following code
+#### 7. Main.cpp- Add the following code
 ```c++
 #include "SDL2/sdl.h"
 
@@ -71,6 +66,15 @@ int main(int argc, char** argv)
 }
 ```
 
-#### 9. Build it. 
-There shouldn't be any errors and you should be able to run it without eny errors.<br>
+#### 8. Build it. 
+There shouldn't be any errors.<br>
+**Do not run it yet though**
+
+#### 9. Copy solution_dir/lib/SDL2.dll to your output directory
+* If you didn't do the previous step, the output directory will be solution_dir/
+* **You need to put it in the debug subfolder**.
+* If you build in release mode later on, you will have to put it into the release subfolder too.
+
+#### 10. Run it
+There shouldn't be any errors.<br>
 When you run it, a black console window will pop up and then close.
