@@ -6,6 +6,13 @@ Extra libaries **not** included:
 * SDL Fonts: https://www.libsdl.org/projects/SDL_ttf/
 * SDL Networking: https://www.libsdl.org/projects/SDL_net/
 
+To add these libraries:
+* Download the files
+* Add the include files to solution_dir/include/SDL2
+* Add the lib files to solution_dir/lib
+* Add the lib files to the project settings (Linker -> Input -> Additional Dependencies)
+* Add the dll files to your output directory debug/release folder(s)
+
 ----
 
 ### Setting up SDL project in visual studio 2015. ###
