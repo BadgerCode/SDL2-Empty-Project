@@ -72,6 +72,7 @@ int main(int argc, char** argv)
 	return 0;
 }
 ```
+_SDL2 needs your main to have the above, non-typical format because SDL2 will call it from its main._
 
 #### 8. Build it. 
 There shouldn't be any errors.<br>
