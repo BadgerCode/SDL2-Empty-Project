@@ -1,6 +1,11 @@
 ### A sample, empty C++ project for Visual Studio 2015 (VS2015) with SDL2 ###
 This has been tested in VS2015 Update 3.
 
+Extra libaries **not** included:
+* SDL Image: https://www.libsdl.org/projects/SDL_image/
+* SDL Fonts: https://www.libsdl.org/projects/SDL_ttf/
+* SDL Networking: https://www.libsdl.org/projects/SDL_net/
+
 ----
 
 ### Setting up SDL project in visual studio 2015. ###
