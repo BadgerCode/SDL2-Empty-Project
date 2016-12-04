@@ -12,10 +12,10 @@ These have **not** been included in this project.
 
 To add these libraries:
 * Download the files
-* Add the include files to solution_dir/include/SDL2
-* Add the lib files to solution_dir/lib
-* Add the lib files to the project settings (Linker -> Input -> Additional Dependencies)
-* Add the dll files to your output directory debug/release folder(s)
+* Add the include files to **solution_dir/include/SDL2** _(they must be in the same folder as the other SDL2 files)_
+* Add the lib files to **solution_dir/lib** _(including the dlls)_
+* Add the lib file names to the project settings (**Linker -> Input -> Additional Dependencies**) _(SDL2file.lib;...)_
+* Add the dll files to your output directory debug/release folder(s) _(unless you set up Visual Studio to copy the dlls on build)_
 
 
 ### How to rename this project after cloning it
