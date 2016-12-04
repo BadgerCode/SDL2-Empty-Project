@@ -17,6 +17,18 @@ To add these libraries:
 * Add the lib files to the project settings (Linker -> Input -> Additional Dependencies)
 * Add the dll files to your output directory debug/release folder(s)
 
+
+### How to rename this project after cloning it
+Replace **NewName** with the project name you want.
+
+* Empty.sln -> **NewName**.sln
+  * Edit the file and change line 6 from ```"Empty", "Empty\Empty.vcxproj"``` to ```"NewName", "NewName\NewName.vcxproj"```
+* Empty/ -> **NewName**
+* Empty/Empty.vcxproj -> **NewName**/**NewName**.vcxproj
+  * Edit the file and change line 23 from ```<RootNamespace>Empty</RootNamespace>``` to ```<RootNamespace>NewName</RootNamespace>```
+* Empty/Empty.vcxproj.filters -> **NewName**/**NewName**.vcxproj.filters
+* Empty/Empty.vcxproj.user -> **NewName**/**NewName**.vcxproj.user
+
 ----
 
 # Setting up SDL project in visual studio 2015. #
