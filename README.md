@@ -78,15 +78,20 @@ int main(int argc, char** argv)
 ```
 _SDL2 needs your main to have the above, non-typical format because SDL2 will call it from its main._
 
-#### 8. Build it. 
-There shouldn't be any errors.<br>
-**Do not run it yet though**
+#### 8. Make Visual Studio copy the .dll files to the output directory after building
+1. Go to the project properties again
+2. Go to Build Events -> Post-Build Event
+3. Set the **Command Line** to ```xcopy /d /y "$(SolutionDir)lib\*.dll" "$(OutDir)"```
+4. Set the **Description** to ```Copies required dlls```
 
-#### 9. Copy solution_dir/lib/SDL2.dll to your output directory
-* If you didn't do the previous step, the output directory will be solution_dir/
-* **You need to put it in the debug subfolder**.
-* If you build in release mode later on, you will have to put it into the release subfolder too.
+#### 9. Remove the option to build for x64
+You won't be able to build in 64-bit unless you also set up the 64-bit files for SDL2.
 
-#### 10. Run it
+1. Go to the project properties again
+2. Click **Configuration Manager** in the top-right
+3. Click on the **Active solution platform** dropdown and click **Edit**
+4. Remove the x64 option
+
+#### 10. Build & run it. 
 There shouldn't be any errors.<br>
 When you run it, a black console window will pop up and then close.
