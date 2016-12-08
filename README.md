@@ -76,7 +76,7 @@ Set SubSystem to Console
 #### 6. [Optional] Change output directory
 1. Go to the project properties again
 2. Click on General
-3. Set Output Directory to $(ProjectDir)\bin\$(Configuration)\
+3. Set Output Directory to $(ProjectDir)bin\$(Configuration)\
 
 #### 7. Main.cpp- Add the following code
 ```c++
