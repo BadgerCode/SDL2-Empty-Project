@@ -11,14 +11,21 @@ These have **not** been included in this project.
 * SDL Networking: https://www.libsdl.org/projects/SDL_net/
 
 To add these libraries:
-* Download the files
-* Add the include files to **solution_dir/include/SDL2** _(they must be in the same folder as the other SDL2 files)_
-* Add the lib files to **solution_dir/lib** _(including the dlls)_
-* Add the lib file names to the project settings (**Linker -> Input -> Additional Dependencies**) _(SDL2file.lib;...)_
-* Add the dll files to your output directory debug/release folder(s) _(unless you set up Visual Studio to copy the dlls on build)_
+
+1. Download the files
+2. Add the include files to **solution_dir/include/SDL2** _(they must be in the same folder as the other SDL2 files)_
+3. Add the lib files to **solution_dir/lib** _(including the dlls)_
+4. Add the lib file names to the project settings (**Linker -> Input -> Additional Dependencies**) _(SDL2file.lib;...)_
+5. **If you have not set up Visual Studio to copy dlls to the output directory on build**: Add the dll files to your output directory debug/release folder(s)
+
+----
+
+## When it comes to using this project, you have two options:
+1. Clone this repository and rename it
+2. Follow the steps to set up a new, empty SDL2 project
 
 
-### How to rename this project after cloning it
+# Option 1: How to rename this project after cloning it
 Replace **NewName** with the project name you want.
 
 * Empty.sln -> **NewName**.sln
@@ -31,7 +38,7 @@ Replace **NewName** with the project name you want.
 
 ----
 
-# Setting up SDL project in visual studio 2015. #
+# Option 2: Setting up SDL project in visual studio 2015. #
 
 * FOLLOW THESE STEPS EXACTLY.<br>
 * At any point during these steps, building might result in an error:	**"entry point must be defined"**.<br>
@@ -107,3 +114,22 @@ You won't be able to build in 64-bit unless you also set up the 64-bit files for
 #### 10. Build & run it. 
 There shouldn't be any errors.<br>
 When you run it, a black console window will pop up and then close.
+
+
+
+## Additional (Optional) Steps:
+
+#### 1. Add a "resources" directory for images/sounds/extra content needed in your build output directory
+If your game relies on extra content such as images or sound, you will need it to be automatically added to your output directory on build.
+
+1. Make a directory called "resources" in your project directory (solution_dir/project_dir/resources)
+2. Go to the project properties again
+3. Go to Build Events -> Post-Build Event
+4. **Command Line**:
+
+  1. If this box isn't empty, add a **&amp;** to the end of it.
+  2. Add the following to it: 
+```rmdir /S /Q "$(OutDir)resources" &
+xcopy /e /i /h "$(ProjectDir)resources" "$(OutDir)resources"```
+
+5. Update the **Description** to say that required resources will be copied
